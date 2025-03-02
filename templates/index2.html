@@ -1,0 +1,41 @@
+<html>
+    <head></head>
+    <body>
+        <!--Lalu di sini menggunakan foreach dengan jinja-->
+        <div>
+        {% for data in value %}<!--Panggil data yang di kirim dari route yaitu (value)-->
+        <li>{{ data }}</li>
+        {% endfor %}
+        </div>
+        <div>==================================================================</div>
+        <!--Lalu di sini menggunakan condition / if else dengan jinja-->
+        <div>
+            {% if value2 == "senang" %}<!--Panggil data yang di kirim dari route yaitu (value2)-->
+            <p>Agus happy</p>
+            {% elif value2 == "Sedih"%}
+            <p>Agus sedih</p>
+            {% else %}
+            <p>Gada Perasaan Apa Apa</p>
+            {% endif %}
+        </div>
+        <div>==================================================================</div>
+        <!--Lalu di sini juga bisa membuat set variable di dalam template nya-->
+        <div>
+            {% set nama = "ikram" %}
+            <p>{{ nama }}</p>
+        </div>
+        <div>==================================================================</div>
+        <!--Lalu di sini bisa mengkombinasikan if else dengan looping/foreach-->
+        <div>
+            {% for data in value %}
+            {% if data == "senin" %}
+            <p>Capee Sekaliii</p>
+            {% elif data == "jumat" %}
+            <p>Besok Liburr</p>
+            {% elif data == "minggu" %}
+            <p>Besok Seninnnnn</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </body>
+</html>
