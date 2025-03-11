@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request
 
 app3 = Flask(__name__)
 
@@ -43,7 +43,6 @@ def parsing2(nama):
 def parsing3():
     data = request.args.get("nilai2")#Mengambil nilai query (nilai2)
     return "Nilainya adalah : {}".format(data)
-
 
 if __name__ == "__main__":
     app3.run(debug=True)
