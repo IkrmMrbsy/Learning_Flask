@@ -6,8 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>About</h2>
-    <h2>Home</h2>
+    <div>
+        <!--Disini untk berpindah halaman kita pakai url_for-->
+        <a href="{{ url_for('home') }}">Home</a> <!--Panggil nama fungsi dari file python nya-->
+        <a href="{{ url_for('about') }}">About</a> 
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </div>
 
     <!--Agar file main_layout ini bisa di pakai di file about/contact dan lainya-->
     {% block content %}{% endblock %}
